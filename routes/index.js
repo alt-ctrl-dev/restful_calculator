@@ -7,7 +7,7 @@ module.exports = function (express) {
   });
 
   router.get('/ui', function (req, res, next) {
-    res.render('index', { title: 'Express' });
+    res.render('index', { title: 'Simple calculator' });
   });
 
   // router.get('/add', function (req, res) {

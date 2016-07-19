@@ -373,7 +373,7 @@ describe("Calculator Test Suite", function () {
                 should.not.exist(res.body.links.equal);
 
                 res.body.links.add.should.match(/\baction=/);
-                res.body.links.add.should.match(/\bnumber=/);
+                res.body.links.add.should.not.match(/\bnumber=/);
                 res.body.links.add.should.match(/\bdisplay=/);
             })
             .expect(200, done);
@@ -403,7 +403,7 @@ describe("Calculator Test Suite", function () {
                 should.not.exist(res.body.links.equal);
 
                 res.body.links.add.should.match(/\baction=/);
-                res.body.links.add.should.match(/\bnumber=/);
+                res.body.links.add.should.not.match(/\bnumber=/);
                 res.body.links.add.should.match(/\bdisplay=/);
             })
             .expect(200, done);
@@ -433,7 +433,7 @@ describe("Calculator Test Suite", function () {
                 should.not.exist(res.body.links.equal);
 
                 res.body.links.add.should.match(/\baction=/);
-                res.body.links.add.should.match(/\bnumber=/);
+                res.body.links.add.should.not.match(/\bnumber=/);
                 res.body.links.add.should.match(/\bdisplay=/);
             })
             .expect(200, done);
@@ -463,7 +463,7 @@ describe("Calculator Test Suite", function () {
                 should.not.exist(res.body.links.equal);
 
                 res.body.links.add.should.match(/\baction=/);
-                res.body.links.add.should.match(/\bnumber=/);
+                res.body.links.add.should.not.match(/\bnumber=/);
                 res.body.links.add.should.match(/\bdisplay=/);
             })
             .expect(200, done);

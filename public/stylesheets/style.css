@@ -1,8 +1,16 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.example {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.display-field {
+  background-color: darkgray;
+  padding: 14px;
+  border-radius: 5px;
 }
