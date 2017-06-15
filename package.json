@@ -5,11 +5,11 @@
   "scripts": {
     "start": "export NODE_ENV=production;npm run start-dev",
     "pretest": "echo 'about to run the test...'",
-"posttest": "echo 'the test has been run!'",
+    "posttest": "echo 'the test has been run!'",
     "test": "npm run ci-test && npm run ci-lint",
     "start-dev": "node ./bin/www",
     "lint": " jshint --reporter=checkstyle app.js",
-    "ci-test": "nyc mocha -u tdd --timeout=3000 > test.tap 2>&1 && nyc report --reporter=clover",
+    "ci-test": "nyc mocha -u tdd --reporter tap --timeout=3000 > test.tap 2>&1 && nyc report --reporter=clover",
     "ci-lint": "jshint --reporter=checkstyle app.js --exclude node_modules > checkstyle-result.xml 2>&1 || exit 0"
   },
   "dependencies": {
@@ -23,13 +23,10 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "istanbul": "^0.4.5",
     "jshint": "^2.9.4",
     "mocha": "^2.5.3",
     "nyc": "^11.0.2",
     "should": "^9.0.2",
-    "supertest": "^1.2.0",
-    "tape": "^4.6.3"
+    "supertest": "^1.2.0"
   }
 }
