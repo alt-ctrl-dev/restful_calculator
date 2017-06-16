@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -15,7 +15,7 @@ app.set('view engine', 'jade');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 if (app.get('env') == 'production')
-  app.use(logger('combined'))
+  app.use(logger('combined'));
 else
   app.use(logger('dev'));
 
